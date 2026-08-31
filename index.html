@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>conversor de unidades</title>
+    <style>
+        body {
+            text-align: center;
+            margin-top: 200px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>kilometros a metros</h1>
+    <p>kilometros: <input type="number" class="km" step="0.1"></p>
+    <button onclick="kmAM()">convertir</button>
+    <h2 class="resultadoKm"></h2>
+
+    <h1>metros a centimetros</h1>
+    <p>metros: <input type="number" class="m" step="0.1"></p>
+    <button onclick="mAcm()">convertir</button>
+    <h2 class="resultadoM"></h2>
+
+    <script>
+        function kmAM() {
+            var km = document.getElementsByClassName("km")[0].value;
+            km = parseFloat(km);
+            var metros = km * 1000;
+
+            document.getElementsByClassName("resultadoKm")[0].innerText =
+                metros + " metros";
+        }
+
+        function mAcm() {
+            var m = document.getElementsByClassName("m")[0].value;
+            m = parseFloat(m);
+            var cm = m * 100;
+
+            document.getElementsByClassName("resultadoM")[0].innerText =
+                cm + " centimetros";
+        }
+    </script>
+
+</body>
+</html>   
